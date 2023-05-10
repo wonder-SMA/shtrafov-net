@@ -7,6 +7,7 @@ import TextInput from '@/components/elements/ui/TextInput';
 import InputContainer from '@/components/layouts/InputContainer';
 import Switch from '@/components/elements/ui/Switch';
 import SwitchContainer from '@/components/layouts/SwitchContainer';
+import DeleteIconButton from '@/components/elements/ui/buttons/DeleteIconButton';
 import { TTextInput } from '@/types/TextInput';
 import { BankAccount } from '@/types/NewCustomer';
 
@@ -84,7 +85,12 @@ const BankAccounts: FC = () => {
           key={accountIndex}
           name="account"
           button={accountIndex !== 0
-            ? <Button type="ghost" danger onClick={deleteHandler(accountIndex)}>– Удалить счет</Button>
+            ? (matchMedia('(min-width: 576px)').matches
+                ? <Button type="ghost" danger onClick={deleteHandler(accountIndex)}>
+                  – Удалить счет
+                </Button>
+                : <DeleteIconButton className="margin-center" onDelete={deleteHandler(accountIndex)} />
+            )
             : null
           }
         >

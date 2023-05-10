@@ -83,8 +83,6 @@ const Table: FC<PropsWithChildren<TableProps>> = ({ data, isEnabledScroll }) => 
         {`
           .container {
             overflow: ${isEnabledScroll ? 'auto' : 'hidden'};
-            scrollbar-gutter: auto;
-            overflow: ${isEnabledScroll ? 'overlay' : 'hidden'};;
 
             .table {
               width: 100%;

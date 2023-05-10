@@ -109,14 +109,18 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, heading, footer, o
               .modal__body {
                 height: 100%;
                 width: 100%;
-                padding: 2rem;
+                padding: 1.2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 overflow: auto;
-                scrollbar-gutter: stable;
-                overflow: ${'overlay'};
+              }
+
+              @media (min-width: 768px) {
+                .modal__body {
+                  padding: 2rem;
+                }
               }
 
               .modal__footer {

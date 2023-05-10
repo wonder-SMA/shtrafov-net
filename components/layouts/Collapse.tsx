@@ -47,6 +47,7 @@ const Collapse: FC<PropsWithChildren<CollapseProps>> = ({ children, className = 
             }
 
             .collapse__body {
+              width: 100%;
               visibility: ${isCollapsed ? 'hidden' : 'visible'};
               height: ${isCollapsed ? '0' : 'auto'};
               display: flex;

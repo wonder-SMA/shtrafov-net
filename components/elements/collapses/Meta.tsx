@@ -86,6 +86,7 @@ const Meta: FC = () => {
             }
 
             .thead {
+              width: 100%;
               background-color: #f3f4f6;
 
               & th {
@@ -95,6 +96,8 @@ const Meta: FC = () => {
             }
 
             .tbody {
+              width: 100%;
+
               & .empty-cell {
                 text-align: center;
 
@@ -114,7 +117,13 @@ const Meta: FC = () => {
               }
 
               & td {
-                padding: 1rem;
+                padding: 0.5rem;
+              }
+
+              @media (min-width: 768px) {
+                & td {
+                  padding: 1rem;
+                }
               }
             }
           }

@@ -37,7 +37,6 @@ const Form = forwardRef<HTMLFormElement | null, PropsWithChildren<FormProps>>(({
             display: flex;
             flex-direction: column;
             overflow: auto;
-            scrollbar-gutter: stable;
 
             .form__content {
               width: 100%;

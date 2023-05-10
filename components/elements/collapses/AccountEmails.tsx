@@ -1,3 +1,4 @@
+import DeleteIconButton from '@/components/elements/ui/buttons/DeleteIconButton';
 import { FC, useCallback, useState } from 'react';
 import { useActions } from '@/hooks/useActions';
 import Button from '@/components/elements/ui/buttons/Button';
@@ -56,7 +57,12 @@ const AccountEmails: FC = () => {
           key={index}
           name="email"
           button={index !== 0
-            ? <Button type="ghost" danger onClick={deleteHandler(index)}>– Удалить email</Button>
+            ? (matchMedia('(min-width: 576px)').matches
+                ? <Button type="ghost" danger onClick={deleteHandler(index)}>
+                  – Удалить email
+                </Button>
+                : <DeleteIconButton className="margin-center" onDelete={deleteHandler(index)} />
+            )
             : null
           }
         >
