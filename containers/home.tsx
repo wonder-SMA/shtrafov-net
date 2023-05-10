@@ -40,6 +40,7 @@ const Home: FC = () => {
       {
         Header: 'Отсрочка оплаты',
         accessor: 'deferral_days',
+        resizable: false,
       },
       {
         Header: 'Создан',

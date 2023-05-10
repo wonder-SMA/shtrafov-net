@@ -76,10 +76,10 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, heading, footer, o
 
             .modal__content {
               height: 80%;
-              min-height: 380px;
+              min-height: 300px;
               max-height: 800px;
-              min-width: 380px;
-              width: 80%;
+              min-width: 300px;
+              width: 95%;
               max-width: 800px;
               display: flex;
               flex-direction: column;
@@ -88,8 +88,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, heading, footer, o
               background: white;
 
               @media (min-width: 768px) {
-                height: 95%;
-                width: 95%
+                width: 80%
               }
 
               .modal__header {

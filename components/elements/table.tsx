@@ -49,10 +49,12 @@ const Table: FC<PropsWithChildren<TableProps>> = ({ data, isEnabledScroll }) => 
                     onClick={onSort(column)}
                     onKeyDown={onSort(column)}
                 >
-                  <span className={`th__text ${column.isSorted ? 'sorted' : ''}`}>
-                    {column.render('Header')}
-                  </span>
-                  {column.isSorted ? <SortIcon isRotate={column.isSortedDesc} /> : ''}
+                  <div className="th__content">
+                    <span className={`th__text ${column.isSorted ? 'sorted' : ''}`}>
+                      {column.render('Header')}
+                    </span>
+                    {column.isSorted ? <SortIcon isRotate={column.isSortedDesc} /> : ''}
+                  </div>
                 </th>
               ))}
             </tr>
@@ -96,7 +98,6 @@ const Table: FC<PropsWithChildren<TableProps>> = ({ data, isEnabledScroll }) => 
 
                 .th {
                   padding: 0.5rem;
-                  vertical-align: baseline;
                   font-weight: 600;
                   outline: none;
                   user-select: none;
@@ -105,6 +106,10 @@ const Table: FC<PropsWithChildren<TableProps>> = ({ data, isEnabledScroll }) => 
                   &:hover, &:focus-visible {
                     outline: 2px solid #4b5563;;
                     outline-offset: -4px;
+                  }
+
+                  .th__content {
+                    white-space: nowrap;
                   }
                 }
 
