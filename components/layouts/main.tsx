@@ -1,13 +1,13 @@
 import React, { FC, PropsWithChildren, ReactNode } from 'react';
-import Meta from '@/components/seo/Meta';
+import Meta from '@/components/seo/meta';
 
-type LayoutProps = {
+type MainProps = {
   children?: ReactNode;
   title: string;
   description?: string;
 }
 
-const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, title, description }) => {
+const Main: FC<PropsWithChildren<MainProps>> = ({ children, title, description }) => {
 
   return (
     <>
@@ -31,4 +31,4 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, title, descripti
   );
 };
 
-export default Layout;
+export default Main;

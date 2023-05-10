@@ -1,12 +1,12 @@
-import DeleteIconButton from '@/components/elements/ui/buttons/DeleteIconButton';
+import DeleteIconButton from '@/components/elements/ui/buttons/delete-icon-button';
 import { FC, useCallback, useState } from 'react';
-import { useActions } from '@/hooks/useActions';
-import Button from '@/components/elements/ui/buttons/Button';
-import Collapse from '@/components/layouts/Collapse';
-import ContainerWithButton from '@/components/layouts/ContainerWithButton';
-import TextInput from '@/components/elements/ui/TextInput';
-import InputContainer from '@/components/layouts/InputContainer';
-import { TTextInput } from '@/types/TextInput';
+import { useActions } from '@/hooks/use-actions';
+import Button from '@/components/elements/ui/buttons/button';
+import Collapse from '@/components/layouts/collapse';
+import CollapseWithButton from '@/components/layouts/collapse-with-button';
+import TextInput from '@/components/elements/ui/text-input';
+import InputContainer from '@/components/layouts/input-container';
+import { TTextInput } from '@/types/text-input';
 
 const AccountEmails: FC = () => {
   const [emails, setEmails] = useState<TTextInput[]>([
@@ -53,7 +53,7 @@ const AccountEmails: FC = () => {
                      pattern,
                      error,
                    }, index) => (
-        <ContainerWithButton
+        <CollapseWithButton
           key={index}
           name="email"
           button={index !== 0
@@ -82,7 +82,7 @@ const AccountEmails: FC = () => {
               onChange={onChange(index)}
             />
           </InputContainer>
-        </ContainerWithButton>
+        </CollapseWithButton>
       ))}
       <Button type="ghost" className="w-full" onClick={addHandler}>
         + Добавить еще email

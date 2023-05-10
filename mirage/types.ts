@@ -2,7 +2,7 @@ import { Registry } from 'miragejs';
 import Schema from 'miragejs/orm/schema';
 import { models } from './models';
 import { factories } from './factories';
-import { TCustomer } from '@/types/Customer';
+import { TCustomer } from '@/types/customer';
 
 export type TCustomers = {
   customer: (i: number) => TCustomer;

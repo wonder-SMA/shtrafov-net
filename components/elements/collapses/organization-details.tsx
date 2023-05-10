@@ -1,9 +1,9 @@
 import { FC, useCallback, useMemo } from 'react';
-import { useActions } from '@/hooks/useActions';
-import Collapse from '@/components/layouts/Collapse';
-import TextInput from '@/components/elements/ui/TextInput';
-import InputContainer from '@/components/layouts/InputContainer';
-import { TTextInput } from '@/types/TextInput';
+import { useActions } from '@/hooks/use-actions';
+import Collapse from '@/components/layouts/collapse';
+import TextInput from '@/components/elements/ui/text-input';
+import InputContainer from '@/components/layouts/input-container';
+import { TTextInput } from '@/types/text-input';
 
 const OrganizationDetails: FC = () => {
   const { setOrganizationDetails } = useActions();

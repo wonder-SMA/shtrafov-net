@@ -5,8 +5,10 @@ type IconButtonProps = {
   children?: ReactNode;
   className?: string;
   name: string;
-  width: number;
-  height: number;
+  id?: string;
+  ariaLabel?: string;
+  width: string;
+  height: string;
   rotate?: number;
   danger?: boolean;
   onClick: () => void;
@@ -16,6 +18,8 @@ const IconButton: FC<PropsWithChildren<IconButtonProps>> = ({
                                                               children,
                                                               className = '',
                                                               name,
+                                                              id,
+                                                              ariaLabel,
                                                               width,
                                                               height,
                                                               rotate,
@@ -30,7 +34,12 @@ const IconButton: FC<PropsWithChildren<IconButtonProps>> = ({
 
   return (
     <>
-      <button className={iconButtonClass} onClick={onClick}>
+      <button
+        className={iconButtonClass}
+        id={id}
+        aria-label={ariaLabel}
+        onClick={onClick}
+      >
         <span className={`${name}-button__icon`}>{children}</span>
       </button>
 
@@ -48,8 +57,8 @@ const IconButton: FC<PropsWithChildren<IconButtonProps>> = ({
             transition: transform .2s, fill .2s;
 
             .${name}-button__icon {
-              width: ${width}px;
-              height: ${height}px;
+              width: ${width};
+              height: ${height};
               display: flex;
               fill: ${danger ? '#ef4444' : '#6b7280'};
               transition: transform .2s, fill .2s;

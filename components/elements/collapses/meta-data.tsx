@@ -1,14 +1,14 @@
 import { FC, useCallback } from 'react';
-import { useActions } from '@/hooks/useActions';
-import { useTypedSelector } from '@/hooks/useTypedSelector';
-import Button from '@/components/elements/ui/buttons/Button';
-import DeleteIconButton from '@/components/elements/ui/buttons/DeleteIconButton';
-import DataIcon from '@/components/elements/ui/icons/DataIcon';
-import Collapse from '@/components/layouts/Collapse';
-import TextInput from '@/components/elements/ui/TextInput';
-import { TModalMetaData } from '@/types/Tables';
+import { useActions } from '@/hooks/use-actions';
+import { useTypedSelector } from '@/hooks/use-typed-selector';
+import Button from '@/components/elements/ui/buttons/button';
+import DeleteIconButton from '@/components/elements/ui/buttons/delete-icon-button';
+import DataIcon from '@/components/elements/ui/icons/data-icon';
+import Collapse from '@/components/layouts/collapse';
+import TextInput from '@/components/elements/ui/text-input';
+import { TModalMetaData } from '@/types/tables';
 
-const Meta: FC = () => {
+const MetaData: FC = () => {
   const { rawMetaData } = useTypedSelector(state => state.newCustomerModalReducer);
   const { setRawMeta, addRawMeta, deleteRawMeta } = useActions();
 
@@ -28,7 +28,7 @@ const Meta: FC = () => {
 
   return (
     <>
-      <Collapse title="Meta">
+      <Collapse title="MetaData">
         <table className="table">
           <thead className="thead">
           <tr>
@@ -133,4 +133,4 @@ const Meta: FC = () => {
   );
 };
 
-export default Meta;
+export default MetaData;

@@ -4,6 +4,8 @@ import classNames from 'classnames';
 type ButtonProps = {
   children?: string;
   className?: string;
+  id?: string;
+  ariaLabel?: string;
   type?: string;
   submit?: boolean;
   danger?: boolean;
@@ -13,6 +15,8 @@ type ButtonProps = {
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
                                                       children,
                                                       className = '',
+                                                      id,
+                                                      ariaLabel,
                                                       type = 'primary',
                                                       submit,
                                                       danger = false,
@@ -30,6 +34,8 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
     <>
       <button
         className={buttonClass}
+        id={id}
+        aria-label={ariaLabel}
         type={submit ? 'submit' : 'button'}
         onClick={clickHandler}
       >

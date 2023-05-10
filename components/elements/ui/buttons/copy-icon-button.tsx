@@ -1,22 +1,30 @@
 import { FC } from 'react';
-import IconButton from '@/components/layouts/IconButton';
+import IconButton from '@/components/layouts/icon-button';
 
 type CopyIconButtonProps = {
   className?: string;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   onCopy: () => void;
 }
 
 const CopyIconButton: FC<CopyIconButtonProps> = ({
                                                    className,
-                                                   width = 16,
-                                                   height = 16,
+                                                   width = '1rem',
+                                                   height = '1rem',
                                                    onCopy,
                                                  }) => {
 
   return (
-    <IconButton className={className} name="copy" width={width} height={height} onClick={onCopy}>
+    <IconButton
+      className={className}
+      name="copy"
+      id="al"
+      aria-label="Copy"
+      width={width}
+      height={height}
+      onClick={onCopy}
+    >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width={width} height={height}>
         <path
           d="M216 960q-29.7 0-50.85-21.15Q144 917.7 144 888V336h72v552h456v72H216Zm144-144q-29.7 0-50.85-21.15Q288

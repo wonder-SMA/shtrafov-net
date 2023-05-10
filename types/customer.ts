@@ -1,4 +1,4 @@
-import { TDateISO } from '@/types/DateISO';
+import { TDateISO } from '@/types/date-iso';
 
 type Balance = {
   currency: string;

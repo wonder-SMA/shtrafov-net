@@ -1,15 +1,15 @@
 import { FC, useCallback, useMemo, useState } from 'react';
-import { useActions } from '@/hooks/useActions';
-import Button from '@/components/elements/ui/buttons/Button';
-import Collapse from '@/components/layouts/Collapse';
-import ContainerWithButton from '@/components/layouts/ContainerWithButton';
-import TextInput from '@/components/elements/ui/TextInput';
-import InputContainer from '@/components/layouts/InputContainer';
-import Switch from '@/components/elements/ui/Switch';
-import SwitchContainer from '@/components/layouts/SwitchContainer';
-import DeleteIconButton from '@/components/elements/ui/buttons/DeleteIconButton';
-import { TTextInput } from '@/types/TextInput';
-import { BankAccount } from '@/types/NewCustomer';
+import { useActions } from '@/hooks/use-actions';
+import Button from '@/components/elements/ui/buttons/button';
+import Collapse from '@/components/layouts/collapse';
+import CollapseWithButton from '@/components/layouts/collapse-with-button';
+import TextInput from '@/components/elements/ui/text-input';
+import InputContainer from '@/components/layouts/input-container';
+import Switch from '@/components/elements/ui/switch';
+import SwitchContainer from '@/components/layouts/switch-container';
+import DeleteIconButton from '@/components/elements/ui/buttons/delete-icon-button';
+import { TTextInput } from '@/types/text-input';
+import { BankAccount } from '@/types/new-customer';
 
 const BankAccounts: FC = () => {
   const bankAccountsData = useMemo<TTextInput[]>(
@@ -81,7 +81,7 @@ const BankAccounts: FC = () => {
   return (
     <Collapse title="Банковские счета">
       {accounts.map((account, accountIndex) => (
-        <ContainerWithButton
+        <CollapseWithButton
           key={accountIndex}
           name="account"
           button={accountIndex !== 0
@@ -132,7 +132,7 @@ const BankAccounts: FC = () => {
               disabled={accountIndex === defaultAccount}
             />
           </SwitchContainer>
-        </ContainerWithButton>
+        </CollapseWithButton>
       ))}
       <Button type="ghost" className="w-full" onClick={addHandler}>
         + Добавить еще счет

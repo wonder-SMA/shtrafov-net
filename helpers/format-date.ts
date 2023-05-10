@@ -1,4 +1,4 @@
-import { TDateISO } from '@/types/DateISO';
+import { TDateISO } from '@/types/date-iso';
 
 export const formatDate = (date: TDateISO) => {
   const timestamp = new Date(Date.parse(date));

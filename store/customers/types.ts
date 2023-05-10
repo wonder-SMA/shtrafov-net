@@ -1,4 +1,4 @@
-import { TCustomer } from '@/types/Customer';
+import { TCustomer } from '@/types/customer';
 
 export type TCreatedCustomer = {
   customer: TCustomer;

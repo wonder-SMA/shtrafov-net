@@ -1,10 +1,10 @@
 import { FC, PropsWithChildren, useCallback, useLayoutEffect, useRef } from 'react';
 import { Cell, HeaderGroup, TableInstance } from 'react-table';
 import { toast } from 'react-toastify';
-import CopyIconButton from '@/components/elements/ui/buttons/CopyIconButton';
-import SortIcon from '@/components/elements/ui/icons/SortIcon';
-import { copyTextToClipboard } from '@/utils/copyTextToClipboard';
-import { TMainTableData } from '@/types/Tables';
+import CopyIconButton from '@/components/elements/ui/buttons/copy-icon-button';
+import SortIcon from '@/components/elements/ui/icons/sort-icon';
+import { copyTextToClipboard } from '@/helpers/copy-text-to-clipboard';
+import { TMainTableData } from '@/types/tables';
 
 type TableProps = {
   data: TableInstance<TMainTableData>;

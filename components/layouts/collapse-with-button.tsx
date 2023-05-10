@@ -1,12 +1,12 @@
 import { FC, PropsWithChildren, ReactNode } from 'react';
 
-type ContainerWithButtonProps = {
+type CollapseWithButtonProps = {
   children?: ReactNode;
   button?: ReactNode | null;
   name: string;
 }
 
-const ContainerWithButton: FC<PropsWithChildren<ContainerWithButtonProps>> = ({ children, button, name }) => {
+const CollapseWithButton: FC<PropsWithChildren<CollapseWithButtonProps>> = ({ children, button, name }) => {
 
   return (
     <>
@@ -44,4 +44,4 @@ const ContainerWithButton: FC<PropsWithChildren<ContainerWithButtonProps>> = ({ 
   );
 };
 
-export default ContainerWithButton;
+export default CollapseWithButton;

@@ -1,5 +1,5 @@
-import { BankAccount, TNewCustomer } from '@/types/NewCustomer';
-import { TModalMetaData } from '@/types/Tables';
+import { BankAccount, TNewCustomer } from '@/types/new-customer';
+import { TModalMetaData } from '@/types/tables';
 
 export type NewCustomerModalState = {
   newCustomer: TNewCustomer;

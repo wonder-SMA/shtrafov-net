@@ -1,6 +1,6 @@
 import { FC, useLayoutEffect, useRef } from 'react';
 import classNames from 'classnames';
-import { TColor } from '@/types/Color';
+import { TColor } from '@/types/color';
 
 type UploadIndicatorProps = {
   className?: string;

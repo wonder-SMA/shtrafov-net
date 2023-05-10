@@ -1,7 +1,7 @@
 import randomstring from 'randomstring';
-import { TCustomer } from '@/types/Customer';
-import { TDateISO } from '@/types/DateISO';
-import { TNewCustomer, TOrganization } from '@/types/NewCustomer';
+import { TCustomer } from '@/types/customer';
+import { TDateISO } from '@/types/date-iso';
+import { TNewCustomer, TOrganization } from '@/types/new-customer';
 
 const getRandomStr = (length: number) => {
   return randomstring.generate({ length, charset: 'alphanumeric' });

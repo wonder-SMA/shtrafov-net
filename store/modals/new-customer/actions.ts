@@ -18,7 +18,7 @@ import {
   SetRawMetaAction,
   SetOrganizationDetailsAction,
   SetPreparedMetaAction,
-} from '@/store/modals/newCustomer/types';
+} from '@/store/modals/new-customer/types';
 
 export const clearState = (payload: ClearStateAction['payload'] = {}) => {
   return { type: NewCustomerModalActionTypes.CLEAR_STATE, payload };
@@ -64,7 +64,7 @@ export const deleteAccountEmail = (payload: DeleteAccountEmailAction['payload'])
   return { type: NewCustomerModalActionTypes.DELETE_ACCOUNT_EMAIL, payload };
 };
 
-// Meta
+// MetaData
 export const setRawMeta = (payload: SetRawMetaAction['payload']) => {
   return { type: NewCustomerModalActionTypes.SET_RAW_META, payload };
 };

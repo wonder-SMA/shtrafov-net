@@ -1,13 +1,13 @@
 import { FC, useState, useCallback, useRef } from 'react';
-import AccountEmails from '@/components/elements/collapses/AccountEmails';
-import BankAccounts from '@/components/elements/collapses/BankAccounts';
-import Button from '@/components/elements/ui/buttons/Button';
-import ClientDetails from '@/components/elements/collapses/ClientDetails';
-import Form from '@/components/layouts/Form';
-import Meta from '@/components/elements/collapses/Meta';
-import OrganizationDetails from '@/components/elements/collapses/OrganizationDetails';
-import Modal from '@/components/layouts/Modal';
-import { useActions } from '@/hooks/useActions';
+import AccountEmails from '@/components/elements/collapses/account-emails';
+import BankAccounts from '@/components/elements/collapses/bank-accounts';
+import Button from '@/components/elements/ui/buttons/button';
+import ClientDetails from '@/components/elements/collapses/client-details';
+import Form from '@/components/layouts/form';
+import MetaData from '@/components/elements/collapses/meta-data';
+import OrganizationDetails from '@/components/elements/collapses/organization-details';
+import Modal from '@/components/layouts/modal';
+import { useActions } from '@/hooks/use-actions';
 
 type CustomerModalProps = {
   onClose: () => void;
@@ -84,7 +84,7 @@ const NewCustomer: FC<CustomerModalProps> = ({ onClose }) => {
           <OrganizationDetails />
           <BankAccounts />
           <AccountEmails />
-          <Meta />
+          <MetaData />
         </Form>
       </Modal>
     );

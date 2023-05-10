@@ -1,18 +1,18 @@
 import { useEffect, FC, useMemo, useCallback } from 'react';
 import { Column, useSortBy, useTable } from 'react-table';
-import Header from '@/components/layouts/Header';
-import Button from '@/components/elements/ui/buttons/Button';
-import Layout from '@/components/layouts/Layout';
-import Modal from '@/containers/Modal';
-import Search from '@/components/elements/ui/Search';
-import Table from '@/components/elements/Table';
-import UploadIndicator from '@/components/elements/ui/UploadIndicator';
-import UploadIndicatorContainer from '@/components/layouts/UploadIndicatorContainer';
-import { formatDate } from '@/utils/formatDate';
-import { formatDays } from '@/utils/formatDays';
-import { useTypedSelector } from '@/hooks/useTypedSelector';
-import { useActions } from '@/hooks/useActions';
-import { TMainTableData } from '@/types/Tables';
+import Header from '@/components/layouts/header';
+import Button from '@/components/elements/ui/buttons/button';
+import Main from '@/components/layouts/main';
+import Modal from '@/containers/modal';
+import Search from '@/components/elements/ui/search';
+import Table from '@/components/elements/table';
+import UploadIndicator from '@/components/elements/ui/upload-indicator';
+import UploadIndicatorContainer from '@/components/layouts/upload-indicator-container';
+import { formatDate } from '@/helpers/format-date';
+import { formatDays } from '@/helpers/format-days';
+import { useTypedSelector } from '@/hooks/use-typed-selector';
+import { useActions } from '@/hooks/use-actions';
+import { TMainTableData } from '@/types/tables';
 
 const Home: FC = () => {
   const { customers } = useTypedSelector(state => state.customersReducer);
@@ -78,7 +78,7 @@ const Home: FC = () => {
   if (customers?.length) {
 
     return (
-      <Layout title="Home">
+      <Main title="Home">
         <Header heading="Клиенты">
           <Search onSearch={() => {}} placeholder="Поиск" />
           <Button onClick={onOpen}>+ Добавить клиента</Button>
@@ -87,7 +87,7 @@ const Home: FC = () => {
           <Table data={tableInstance} isEnabledScroll={!countOpenModals} />
           <Modal modalNames={['newCustomer']} />
         </main>
-      </Layout>
+      </Main>
     );
   }
 

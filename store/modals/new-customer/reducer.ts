@@ -2,7 +2,7 @@ import {
   NewCustomerModalActions,
   NewCustomerModalActionTypes,
   NewCustomerModalState,
-} from '@/store/modals/newCustomer/types';
+} from '@/store/modals/new-customer/types';
 import randomstring from 'randomstring';
 
 const initialState: NewCustomerModalState = {
@@ -140,7 +140,7 @@ export const newCustomerModalReducer = (state = initialState, action: NewCustome
       return { ...state, newCustomer: { ...state.newCustomer, invoice_emails } };
     }
 
-    // Meta
+    // MetaData
     case NewCustomerModalActionTypes.SET_RAW_META: {
       const { index, tableEntryKey, changedValue } = action.payload;
       let rawMetaData = [];

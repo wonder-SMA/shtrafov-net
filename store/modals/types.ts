@@ -1,4 +1,4 @@
-import { TModalName } from '@/types/ModalName';
+import { TModalName } from '@/types/modal-name';
 
 export type ModalState = {
   isOpenModals: Map<TModalName, boolean>;

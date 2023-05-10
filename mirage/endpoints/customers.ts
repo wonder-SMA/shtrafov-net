@@ -1,5 +1,5 @@
 import { Response, Server } from 'miragejs';
-import { getPrepareCustomerData } from '@/mirage/getPrepareCustomerData';
+import { getPrepareCustomerData } from '@/mirage/get-prepare-customer-data';
 import { TAppSchema } from '../types';
 
 export function routesForCustomers(server: Server) {

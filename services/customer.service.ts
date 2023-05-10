@@ -1,5 +1,5 @@
 import { TCreatedCustomer, TCustomers } from '@/store/customers/types';
-import { TNewCustomer } from '@/types/NewCustomer';
+import { TNewCustomer } from '@/types/new-customer';
 
 export const CustomerService = {
   async getCustomers(): Promise<TCustomers> {

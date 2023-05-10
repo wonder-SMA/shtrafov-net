@@ -8,7 +8,7 @@ import {
   useEffect,
   useRef,
 } from 'react';
-import CloseIconButton from '@/components/elements/ui/buttons/CloseIconButton';
+import CloseIconButton from '@/components/elements/ui/buttons/close-icon-button';
 
 type ModalProps = {
   children?: ReactNode;
@@ -76,7 +76,9 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, heading, footer, o
 
             .modal__content {
               height: 80%;
+              min-height: 380px;
               max-height: 800px;
+              min-width: 380px;
               width: 80%;
               max-width: 800px;
               display: flex;
@@ -85,9 +87,9 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, heading, footer, o
               border-radius: 8px;
               background: white;
 
-              @media only screen and (min-width: 480px) {
-                min-height: 380px;
-                min-width: 380px;
+              @media (min-width: 768px) {
+                height: 95%;
+                width: 95%
               }
 
               .modal__header {

@@ -1,8 +1,8 @@
 import { FC, useCallback } from 'react';
 import modals from './modals';
-import { useTypedSelector } from '@/hooks/useTypedSelector';
-import { useActions } from '@/hooks/useActions';
-import { TModalName } from '@/types/ModalName';
+import { useTypedSelector } from '@/hooks/use-typed-selector';
+import { useActions } from '@/hooks/use-actions';
+import { TModalName } from '@/types/modal-name';
 
 type ModalProps = {
   modalNames: TModalName[];

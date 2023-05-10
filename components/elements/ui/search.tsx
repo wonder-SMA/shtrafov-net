@@ -46,6 +46,8 @@ const Search: FC<SearchProps> = ({ placeholder, onSearch }) => {
           type="button"
           onClick={clickHandler}
           className="search__button"
+          id="al"
+          aria-label="Search"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +71,7 @@ const Search: FC<SearchProps> = ({ placeholder, onSearch }) => {
             flex-wrap: nowrap;
 
             .search__input {
-              width: 30vw;
+              width: 18vw;
               max-width: 200px;
               padding: 0.5rem;
               border: 2px solid #d1d5db;
@@ -118,16 +120,16 @@ const Search: FC<SearchProps> = ({ placeholder, onSearch }) => {
               }
 
               .search__icon {
-                width: 24px;
-                height: 24px;
+                width: 1.5rem;
+                height: 1.5rem;
                 fill: #9ca3af;
                 transition: fill .2s;
               }
             }
 
-            @media (max-width: 480px) {
+            @media (min-width: 375px) {
               .search__input {
-                width: 18vw;
+                width: 30vw;
               }
             }
           }

@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, ReactNode, useCallback, useState } from 'react';
-import ArrowIcon from '@/components/elements/ui/icons/ArrowIcon';
+import ArrowIcon from '@/components/elements/ui/icons/arrow-icon';
 import classNames from 'classnames';
 
 type CollapseProps = {
